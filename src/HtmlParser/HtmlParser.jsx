@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { TextField, Button, Divider, Paper, Table, TableContainer, TableCell, TableBody, TableHead, TableRow } from '@mui/material';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SortIcon from '@mui/icons-material/Sort';
 
 import './HtmlParser.css'
@@ -102,6 +100,7 @@ class HtmlParser extends Component {
       <div className="main_Wrapper">
         <div className="left_inputSection">
           <TextField
+            data-testid="input"
             label="HTML Metadata"
             multiline
             rows={10}
@@ -110,7 +109,7 @@ class HtmlParser extends Component {
             value={this.state.htmlStr} 
             onChange={(e) => this.setState({htmlStr: e.target.value})}
           />
-          {this.state.errMsg && (<p className="errTxt">{this.state.errMsg}</p>)}
+          {this.state.errMsg && (<p data-testid="errTxt" className="errTxt">{this.state.errMsg}</p>)}
           <Button sx={{ width: '80%', maxWidth: '450px', minWidth: '280px', margin: '20px auto'}}
                   variant="contained" 
                   onClick={this.onParse}>
@@ -136,8 +135,8 @@ class HtmlParser extends Component {
                       key={idx}
                       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
-                      <TableCell align="left">{metaObj.name}</TableCell>
-                      <TableCell align="left">{metaObj.content}</TableCell>
+                      <TableCell data-testid="meta_name" align="left">{metaObj.name}</TableCell>
+                      <TableCell data-testid="meta_content" align="left">{metaObj.content}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -150,5 +149,6 @@ class HtmlParser extends Component {
     )
   }
 }
+
 
 export default HtmlParser
