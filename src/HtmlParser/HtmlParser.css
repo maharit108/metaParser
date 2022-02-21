@@ -1,0 +1,31 @@
+.main_Wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.left_inputSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 50vw;
+}
+
+.errTxt {
+  font-size: 13px;
+  color: rgb(202, 10, 10);
+  width: 80%;
+  max-width: 450px;
+  min-width: 280px;
+  margin: 0;
+  text-align: left;
+}
+
+.right_displaySection {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50vw;
+  margin-top: 80px;
+}
