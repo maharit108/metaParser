@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/metaParser/static/css/main.53e4055a.css",
+    "main.js": "/metaParser/static/js/main.5cd77b0b.js",
+    "index.html": "/metaParser/index.html",
+    "main.53e4055a.css.map": "/metaParser/static/css/main.53e4055a.css.map",
+    "main.5cd77b0b.js.map": "/metaParser/static/js/main.5cd77b0b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53e4055a.css",
+    "static/js/main.5cd77b0b.js"
+  ]
+}
